@@ -15,3 +15,11 @@ class PixelTransformation:
             return (0, 0, 0, 0)
         else:
             return pixel
+        
+    def blur_pixel(self, pixel):
+        # Alpha indicator (0-255)
+        alpha = 50
+        if pixel[3] == 0:
+            return (0, 0, 0, 0)
+        else:
+            return (pixel[0], pixel[1], pixel[2], alpha)
