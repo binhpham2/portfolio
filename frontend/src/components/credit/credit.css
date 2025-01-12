@@ -1,0 +1,10 @@
+.CreditNote {
+    position: absolute;
+    top: calc(100vh - 3rem);
+    left: 1rem;
+    z-index: 150;
+    margin: 0 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
