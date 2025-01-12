@@ -1,0 +1,33 @@
+@keyframes fadeOutIn {
+    0% {
+        background-image: url(../../../images/l1.png);
+    }
+
+    33% {
+        background-image: url(../../../images/l2.png);
+    }
+
+    66% {
+        background-image: url(../../../images/l3.png);
+    }
+
+    100% {
+        background-image: url(../../../images/l1.png);
+    }
+}
+
+.FirstBackground {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+    z-index: 100;
+    animation-name: fadeOutIn;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}

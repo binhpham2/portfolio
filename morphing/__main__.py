@@ -11,9 +11,9 @@ if __name__ == "__main__":
     IT_obj.help()
 
     # Folder path configs (only for running module from root - sumiefolio)
-    input_path = "./inkmotif/output/tree_transparent_background.png"
-    output_path = "./inkmotif/output/tree_blurred_2.png"
-    transform_pixel = PT_obj.blur_pixel
+    input_path = "./inkmotif/input/latern.png"
+    output_path = "./inkmotif/output/latern.png"
+    transform_pixel = PT_obj.make_light_pixel_white
 
     # Transform image
     IT_obj.transform(
