@@ -1,4 +1,4 @@
-import './MenuFrame.css'
+import './menu.css'
 import MenuButton from './MenuButton'
 
 const MenuFrame = () => {

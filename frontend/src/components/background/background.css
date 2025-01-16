@@ -1,25 +1,25 @@
 @keyframes fadeOutIn {
     0% {
-        background-image: url(../../../images/l1.png);
+        background-image: url(../../../images/latern_1.png);
     }
 
     33% {
-        background-image: url(../../../images/l2.png);
+        background-image: url(../../../images/latern_2.png);
     }
 
     66% {
-        background-image: url(../../../images/l3.png);
+        background-image: url(../../../images/latern_3.png);
     }
 
     100% {
-        background-image: url(../../../images/l1.png);
+        background-image: url(../../../images/latern_1.png);
     }
 }
 
 .FirstBackground {
     height: 100vh;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-size: cover;
@@ -30,4 +30,110 @@
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+
+    mask-image: url(../../../images/splash.gif);
+    mask-size: cover;
+    mask-position: center;
+}
+
+.Leafs, .GreenLeaf, .OrangeLeaf {
+    position: fixed;
+    top: 0;
+    z-index: 150;
+}
+
+.GreenLeaf, .OrangeLeaf {
+    opacity: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+@keyframes leaf_falling {
+    0% {
+        opacity: 0;
+        transform: translateX(0vw) translateY(-5vh) rotateZ(120deg);
+    }
+    1% {
+        opacity: 1;
+        transform: translateX(0vw) translateY(-5vh) rotateZ(120deg);
+    }
+    25% {
+        opacity: 1;
+        transform: translateX(-4vw) translateY(25vh) rotateZ(170deg);
+    }
+    50% {
+        opacity: 1; 
+        transform: translateX(-8vw) translateY(50vh) rotateZ(220deg);
+    }
+    75% {
+        opacity: 1;
+        transform: translateX(-12vw) translateY(75vh) rotateZ(270deg);
+    }
+    98% {
+        opacity: 0.5;
+        transform: translateX(-16vw) translateY(100vh) rotateZ(320deg);
+    }
+    99% {
+        opacity: 0;
+        transform: translateX(-16vw) translateY(105vh) rotateZ(370deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(0vw) translateY(-5vh) rotateZ(120deg);
+    }
+}
+
+@keyframes leaf_falling_opposite {
+    0% {
+        opacity: 0;
+        transform: translateX(0vw) translateY(-5vh) rotateZ(0deg);
+    }
+    1% {
+        opacity: 1;
+        transform: translateX(0vw) translateY(-5vh) rotateZ(0deg);
+    }
+    25% {
+        opacity: 1;
+        transform: translateX(-4vw) translateY(25vh) rotateZ(-40deg);
+    }
+    50% {
+        opacity: 1; 
+        transform: translateX(-8vw) translateY(50vh) rotateZ(-80deg);
+    }
+    75% {
+        opacity: 1;
+        transform: translateX(-12vw) translateY(75vh) rotateZ(-120deg);
+    }
+    98% {
+        opacity: 0.5;
+        transform: translateX(-16vw) translateY(100vh) rotateZ(-160deg);
+    }
+    99% {
+        opacity: 0;
+        transform: translateX(-16vw) translateY(105vh) rotateZ(-200deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(0vw) translateY(-5vh) rotateZ(0deg);
+    }
+}
+
+.Leafs {
+    height: 100vh;
+    width: 100vw;
+}
+
+.GreenLeaf {
+    background-image: url(../../../images/green_leaf.png);
+    width: 100px;
+    height: 100px;
+    animation: leaf_falling 8s linear infinite;
+}
+
+.OrangeLeaf {
+    background-image: url(../../../images/orange_leaf.png);
+    width: 100px;
+    height: 100px;
+    animation: leaf_falling 8s linear infinite;
 }

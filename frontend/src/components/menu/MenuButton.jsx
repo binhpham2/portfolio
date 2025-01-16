@@ -1,4 +1,4 @@
-import './MenuFrame.css'
+import './menu.css'
 
 const MenuButton = () => {
     return (

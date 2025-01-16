@@ -1,11 +1,12 @@
 import './background.css'
 import FirstBackground from './FirstBackground';
-import SecondBackground from './SecondBackground';
+import Leafs from './Leafs';
 
 const Background = () => {
     return (
         <div className='Background'>
             <FirstBackground/>
+            <Leafs/>
         </div>
     );
 }

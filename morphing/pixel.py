@@ -11,7 +11,7 @@ class PixelTransformation:
         
         # If all 3 R, G, B values are greater than the threshold, clear the pixel.
         # If not, keep the pixel as is.
-        if pixel[0] > threshold and pixel[1] > threshold and pixel[2] > threshold:
+        if (pixel[0] > threshold and pixel[1] > threshold and pixel[2] > threshold) or (pixel[0]+pixel[1]+pixel[2]>250 and pixel[1]>100):
             return (0, 0, 0, 0)
         else:
             return pixel
