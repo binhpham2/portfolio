@@ -2,9 +2,7 @@ import './background.css'
 
 const FirstBackground = () => {
     return (
-        <div className='FirstBackground'>
-            
-        </div>
+        <div className='FirstBackground'/>
     );
 }
 

@@ -1,18 +1,15 @@
-@keyframes fadeOutIn {
+@keyframes backgroundFade {
     0% {
-        background-image: url(../../../images/latern_1.png);
+        background-image: url(../../images/laterns/latern_1.png);
     }
-
     33% {
-        background-image: url(../../../images/latern_2.png);
+        background-image: url(../../images/laterns/latern_2.png);
     }
-
     66% {
-        background-image: url(../../../images/latern_3.png);
+        background-image: url(../../images/laterns/latern_3.png);
     }
-
     100% {
-        background-image: url(../../../images/latern_1.png);
+        background-image: url(../../images/laterns/latern_1.png);
     }
 }
 
@@ -26,14 +23,23 @@
     background-repeat: no-repeat;
     background-position: top right;
     z-index: 100;
-    animation-name: fadeOutIn;
+    animation-name: backgroundFade;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 
-    mask-image: url(../../../images/splash.gif);
+    mask-image: url(../../images/ink/splash.gif);
     mask-size: cover;
     mask-position: center;
+}
+
+.BackgroundPreload {
+    z-index: -100;
+    height: 0px;
+    width: 0px;
+    position: fixed;
+    top: -100vh;
+    left: -100vw;
 }
 
 .Leafs, .GreenLeaf, .OrangeLeaf {
@@ -125,14 +131,14 @@
 }
 
 .GreenLeaf {
-    background-image: url(../../../images/green_leaf.png);
+    background-image: url(../../images/leafs/green_leaf.png);
     width: 100px;
     height: 100px;
     animation: leaf_falling 8s linear infinite;
 }
 
 .OrangeLeaf {
-    background-image: url(../../../images/orange_leaf.png);
+    background-image: url(../../images/leafs/orange_leaf.png);
     width: 100px;
     height: 100px;
     animation: leaf_falling 8s linear infinite;
