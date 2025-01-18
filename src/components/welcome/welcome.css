@@ -1,11 +1,33 @@
 .Welcome {
-    font-family: Georgia, serif;
-    font-style: normal;
-    height: fit-content;
-    width: fit-content;
+    display: grid;
+    grid-template-rows: 50vh 50vh 50vh;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
     position: relative;
-    z-index: 1000;
+    z-index: 150;
     margin: 0;
     padding: 0;
-    color: white;
+}
+
+.Name {
+    position: relative;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column: span 1;
+    grid-row: span 1;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .Name {
+        grid-column: span 2;
+    }
+}
+
+.Name > svg {
+    width: 80%;
 }

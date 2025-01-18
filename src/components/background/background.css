@@ -42,19 +42,6 @@
     left: -100vw;
 }
 
-.Leafs, .GreenLeaf, .OrangeLeaf {
-    position: fixed;
-    top: 0;
-    z-index: 150;
-}
-
-.GreenLeaf, .OrangeLeaf {
-    opacity: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top right;
-}
-
 @keyframes leaf_falling {
     0% {
         opacity: 0;
@@ -125,21 +112,37 @@
     }
 }
 
-.Leafs {
+.GreenLeafs, .OrangeLeafs {
+    position: fixed;
+    top: 0;
     height: 100vh;
     width: 100vw;
 }
 
-.GreenLeaf {
-    background-image: url(../../images/leafs/green_leaf.png);
+.GreenLeafs {
+    z-index: 500;
+}
+
+.OrangeLeafs {
+    z-index: 500;
+}
+
+.GreenLeaf, .OrangeLeaf {
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
     width: 100px;
     height: 100px;
     animation: leaf_falling 8s linear infinite;
 }
 
+.GreenLeaf {
+    background-image: url(../../images/leafs/green_leaf.png);
+}
+
 .OrangeLeaf {
     background-image: url(../../images/leafs/orange_leaf.png);
-    width: 100px;
-    height: 100px;
-    animation: leaf_falling 8s linear infinite;
 }

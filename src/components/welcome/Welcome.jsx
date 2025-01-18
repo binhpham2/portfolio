@@ -1,11 +1,14 @@
 import './welcome.css'
-import name from '../../images/texts/name.svg'
+import Name from './Name';
 
 const Welcome = () => {
     return (
-        <h1 className='Welcome'>
-            Binh Pham
-        </h1>
+        <div className='Welcome'>
+            <Name/>
+            <Name/>
+            <Name/>
+            <Name/>
+        </div>
     );
 }
 
