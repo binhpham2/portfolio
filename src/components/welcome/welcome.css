@@ -13,6 +13,21 @@
     padding: 0;
 }
 
+@keyframes nameFloat {
+    0% {
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(1.5vh);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0vh);
+        opacity: 1;
+    }
+}
+
 .Name {
     position: relative;
     grid-column-start: 1;
@@ -22,12 +37,45 @@
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    .Name {
-        grid-column: span 2;
-    }
+.Name > svg {
+    width: 90%;
+    height: 90%;
+    animation: nameFloat 2s linear infinite;
 }
 
-.Name > svg {
+.Introduction {
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 80%;
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+}
+
+.Introduction p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10vh 10vw;
+    line-height: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.EmptyWelcomeGridItem {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+@media (max-width: 768px) {
+    .Name, .Introduction {
+        grid-column: span 2;
+    }
+
+    .EmptyWelcomeGridItem {
+        display: none;
+        grid-column: span 0;
+        grid-row: span 0;
+    }
 }
