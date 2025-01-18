@@ -19,7 +19,7 @@
         opacity: 1;
     }
     50% {
-        transform: translateY(1.5vh);
+        transform: translateY(8px);
         opacity: 0.5;
     }
     100% {
@@ -41,6 +41,29 @@
     width: 90%;
     height: 90%;
     animation: nameFloat 2s linear infinite;
+}
+
+@keyframes nameAppear {
+    0% {
+        stroke-dashoffset: 100vw;
+    }
+    90% {
+        fill: transparent;
+    }
+    100% {
+        fill: white;
+        stroke-dashoffset: 0;
+    }
+}
+
+.Name > svg path {
+    fill: transparent;
+    stroke: white;
+    stroke-width: 1px;
+    stroke-dasharray: 100vw;
+    stroke-dashoffset: 100vw;
+    animation: nameAppear 6s ease-in-out forwards;
+    animation-delay: 1s;
 }
 
 .Introduction {
