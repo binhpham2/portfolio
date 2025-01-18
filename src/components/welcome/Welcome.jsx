@@ -1,4 +1,5 @@
 import './welcome.css'
+import name from '../../images/texts/name.svg'
 
 const Welcome = () => {
     return (
