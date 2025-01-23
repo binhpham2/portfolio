@@ -7,7 +7,7 @@ class PixelTransformation:
 
     def make_light_pixel_transparent(self, pixel):
         # Light threshold
-        threshold = 150
+        threshold = 10
         
         # If all 3 R, G, B values are greater than the threshold, clear the pixel.
         # If not, keep the pixel as is.

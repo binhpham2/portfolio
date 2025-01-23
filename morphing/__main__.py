@@ -14,9 +14,10 @@ if __name__ == "__main__":
     IT_obj.help()
     """
     # Folder path configs (only for running module from root - sumiefolio)
-    input_path = "./inkmotif/input/inklines.png"
-    output_path = "./inkmotif/output/inklines.png"
-    transform_pixel = PT_obj.make_dark_pixel_white
+    image_name = "dragon"
+    input_path = f"./inkmotif/input/{image_name}.png"
+    output_path = f"./inkmotif/output/{image_name}.png"
+    transform_pixel = PT_obj.make_light_pixel_transparent
 
     # Transform image
     IT_obj.transform(
