@@ -1,10 +1,11 @@
 import './welcome.css'
+import dragon from '../../images/introduction/dragon.png'
 
 const Introduction = () => {
     return (
         <div className='Introduction'>
-            <p>Software/data engineer who loves building stuffs. 
-                Lorem ipsum bla bla bla.</p>
+            <p>Hi, welcome to my portfolio!</p>
+            {/*<img src={dragon} alt='dragon' />*/}
         </div>
     );
 }

@@ -51,7 +51,7 @@
         fill: transparent;
     }
     100% {
-        fill: white;
+        fill: rgb(255, 255, 255);
         stroke-dashoffset: 0;
     }
 }
@@ -79,27 +79,33 @@
     opacity: 0;
     grid-column: span 1;
     grid-row: span 1;
-    height: 80%;
-    width: 100%;
+    height: fit-content;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    border: 10px ridge rgb(35, 25, 0);
+    background-color: rgba(230, 230, 210, 0.9);
+    border-radius: 10px;
     animation: introductionAppear 1s ease-in-out forwards;
     animation-delay: 7s;
+    justify-self: center;
+    align-self: center;
 }
 
 .Introduction p {
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 20px;
     line-height: 1.5rem;
-    font-weight: normal;
+    font-weight: bold;
     color: rgb(0, 0, 0);
     font-style: italic;
-    border: 10px ridge rgb(45, 26, 0);
-    background-color: rgba(255, 238, 188, 0.8);
-    border-radius: 10px;
-    margin: 20px;
+}
+
+.Introduction > img {
+    height: 20vh;
+    aspect-ratio: 1 / 1;
 }
 
 .EmptyWelcomeGridItem {
