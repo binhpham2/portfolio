@@ -3,9 +3,8 @@ import './welcome.css'
 const Introduction = () => {
     return (
         <div className='Introduction'>
-            <p>Welcome to my portfolio!</p>
-            <p>I hope you will find something useful here.</p>
-            <p className='IntroductionInstruction'>(Scroll down to continue.)</p>
+            <p>An aspiring software engineer who loves building random stuffs.</p>
+            <p className='IntroductionInstruction'></p>
         </div>
     );
 }
