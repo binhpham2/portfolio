@@ -4,3 +4,24 @@
     justify-content: center;
     align-items: center;
 }
+
+.App > p {
+    display: none;
+}
+
+/* RESPONSIVENESS HANDLING */
+
+@media (max-width: 200px) {
+    .App > p {
+        display: block;
+        font-size: 8vw;
+        color: white;
+        z-index: 500;
+        padding: 5vw;
+        text-align: center;
+    }
+
+    .App > div {
+        display: none;
+    }
+}

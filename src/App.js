@@ -17,6 +17,7 @@ const App = () => {
 
   return (
     <div className='App'>
+      <p>Please enlarge your screen or rotate your phone.</p>
       <Background />
       <Welcome />
       <MenuFrame />

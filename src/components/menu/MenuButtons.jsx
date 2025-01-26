@@ -4,16 +4,16 @@ const MenuButtons = () => {
     return (
         <div className='MenuButtons'>
             <div>
-                <button>EMPLOYMENT</button>
+                <button className='EmploymentButton'></button>
             </div>
             <div>
-                <button>EDUCATION</button>
+                <button className='EducationButton'></button>
             </div>
             <div>
-                <button>PROJECTS</button>
+                <button className='ProjectsButton'></button>
             </div>
             <div>
-                <button>CERTIFICATIONS</button>
+                <button className='CertificationsButton'></button>
             </div>
         </div>
     )
