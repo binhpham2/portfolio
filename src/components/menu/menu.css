@@ -1,13 +1,35 @@
 .MenuFrame {
     display: grid;
-    grid-template-rows: 50vh 50vh;
+    grid-template-rows: 100vh;
     grid-template-columns: 18vw 18vw 18vw 18vw 18vw;
     gap: 0;
     width: 90vw;
     height: 100vh;
 }
 
-.MenuButton {
+.MenuButtons {
+    display: grid;
+    grid-template-rows: 25vh 25vh;
+    grid-template-columns: 18vw 18vw;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row: span 2;
+    grid-column: span 1;
     position: relative;
     z-index: 150;
+    margin: 5vh 0;
+}
+
+.MenuButtons > div {
+    grid-row: span 1;
+    grid-column: span 1;
+    align-self: center;
+    justify-self: center;
+    width: min(18vw, 25vh);
+    aspect-ratio: 1 / 1;
+}
+
+.MenuButtons > div > button {
+    width: 80%;
+    height: 80%;
 }

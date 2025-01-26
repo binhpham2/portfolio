@@ -1,10 +1,10 @@
 import './menu.css'
-import MenuButton from './MenuButton'
+import MenuButtons from './MenuButtons'
 
 const MenuFrame = () => {
     return (
         <div className='MenuFrame'>
-            <MenuButton></MenuButton>
+            <MenuButtons></MenuButtons>
         </div>
     )
 }
