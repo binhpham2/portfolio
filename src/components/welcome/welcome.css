@@ -1,17 +1,25 @@
+/*-------------------------*/
+/* GENERAL WELCOME SECTION */
+/*-------------------------*/
+
 .Welcome {
     display: grid;
-    grid-template-rows: 50vh 50vh 50vh;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 50vh 50vh;
+    grid-template-columns: 18vw 18vw 18vw 18vw 18vw;
     gap: 0;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100vw;
+    width: 90vw;
     position: relative;
     z-index: 150;
     margin: 0;
     padding: 0;
 }
+
+/*------*/
+/* NAME */
+/*------*/
 
 @keyframes nameFloat {
     0% {
@@ -28,15 +36,6 @@
     }
 }
 
-@keyframes nameBackgroundAppear {
-    from {
-        background-color: rgba(0, 0, 0, 0);
-    } 
-    to {
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-}
-
 .Name {
     position: relative;
     grid-column-start: 1;
@@ -46,8 +45,6 @@
     text-align: center;
     width: 100%;
     height: 100%;
-    animation: nameBackgroundAppear 1s ease-in-out forwards;
-    animation-delay: 6s;
 }
 
 .Name > svg {
@@ -79,16 +76,23 @@
     animation-delay: 1s;
 }
 
-@keyframes introductionAppear {
+/*----------------------*/
+/* INTRODUCTION SECTION */
+/*----------------------*/
+
+@keyframes introductionTextAppear {
     from {
-        background-color: rgba(0, 0, 0, 0);
+        opacity: 0;
     }
     to {
-        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 1;
     }
 }
 
 .Introduction {
+    position: relative;
+    grid-column-start: 1;
+    grid-row-start: 2;
     grid-column: span 2;
     grid-row: span 1;
     height: 100%;
@@ -100,37 +104,23 @@
     justify-self: center;
     align-self: flex-start;
     margin: 0 3vw;
-    background-color: rgba(0, 0, 0, 0);
-    animation: introductionAppear 1s ease-in-out forwards;
-    animation-delay: 6s;
-}
-
-@keyframes introductionTextAppear {
-    from {
-        color: rgba(255, 255, 255, 0);
-    }
-    to {
-        color: rgb(255, 255, 255);
-    }
 }
 
 .Introduction p {
+    opacity: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 3vh 4vw;
+    margin: 3vh 5vw;
     line-height: 2rem;
     font-weight: normal;
     font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding: 20px 5vw;
     animation: introductionTextAppear 1s ease-in-out forwards;
     animation-delay: 6s;
     font-style: italic;
     z-index: 400;
-}
-
-.Introduction .IntroductionInstruction {
-    font-weight: normal;
-    font-style: normal;
-    color: rgb(50, 50, 50);
 }
 
 .EmptyWelcomeGridItem {
@@ -147,4 +137,21 @@
         grid-column: span 0;
         display: none;
     }
+}
+
+/* MOVING OUT ANIMATION */
+@keyframes moveOut {
+    from {
+        transform: none;
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-50vw) translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.Welcome {
+    animation: moveOut linear;
+    animation-timeline: scroll(block nearest);
 }
