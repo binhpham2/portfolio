@@ -4,7 +4,7 @@
 
 .Welcome {
     display: grid;
-    grid-template-rows: 50vh 50vh;
+    grid-template-rows: 45vh 45vh;
     grid-template-columns: 18vw 18vw 18vw 18vw 18vw;
     gap: 0;
     justify-content: center;
@@ -12,7 +12,7 @@
     height: 100vh;
     width: 90vw;
     position: sticky;
-    top: 0;
+    top: 10vh;
     z-index: 150;
     margin: 0;
     padding: 0;
@@ -169,6 +169,7 @@
 }
 
 /*
+THIS IS A NEW FEATURE AND NOT SUPPORTED IN MOST BROWSERS.
 .Welcome {
     animation: moveOut linear;
     animation-timeline: scroll(block nearest);

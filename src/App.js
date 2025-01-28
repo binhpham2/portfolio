@@ -2,8 +2,10 @@ import './App.css';
 import Background from './components/background/Background'
 import Welcome from './components/welcome/Welcome'
 import MenuFrame from './components/menu/MenuFrame';
+import Panel from './components/panel/Panel';
 import { useEffect } from 'react'
 import { animateWelcome } from './scripts/animation';
+import splashGif from './images/ink/splash.gif'
 
 const App = () => {
   useEffect(() => {
@@ -17,11 +19,21 @@ const App = () => {
 
     // Add animation
     animateWelcome()
+
+    // Reload GIFs
+    const element = document.querySelector(".FirstBackground");
+    if (element) {
+      const timestamp = new Date().getTime(); // Generate a unique timestamp
+      element.style.maskImage = `url(${splashGif}?cacheBust=${timestamp})`;
+      element.style.WebkitMaskImage = `url(${splashGif}?cacheBust=${timestamp})`; // For WebKit browsers
+    }
+
   }, []);
 
   return (
     <div className='App'>
       <p>Please enlarge your screen or rotate your phone.</p>
+      <Panel />
       <Background />
       <Welcome />
       <MenuFrame />
