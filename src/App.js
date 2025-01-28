@@ -6,6 +6,7 @@ import Panel from './components/panel/Panel';
 import { useEffect } from 'react'
 import { animateWelcome } from './scripts/animation';
 import splashGif from './images/ink/splash.gif'
+import Employment from './components/employment/Employment';
 
 const App = () => {
   useEffect(() => {
@@ -36,7 +37,9 @@ const App = () => {
       <Panel />
       <Background />
       <Welcome />
-      <MenuFrame />
+      <Employment />
+
+      {/*<MenuFrame />*/}
     </div>
   );
 }
