@@ -3,6 +3,7 @@ import Background from './components/background/Background'
 import Welcome from './components/welcome/Welcome'
 import MenuFrame from './components/menu/MenuFrame';
 import { useEffect } from 'react'
+import { animateWelcome } from './scripts/animation';
 
 const App = () => {
   useEffect(() => {
@@ -13,6 +14,9 @@ const App = () => {
     setTimeout(() => {
         document.documentElement.style.overflow = "auto";
     }, 6000);
+
+    // Add animation
+    animateWelcome()
   }, []);
 
   return (
