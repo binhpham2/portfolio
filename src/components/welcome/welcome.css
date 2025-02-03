@@ -109,18 +109,17 @@
 
 .Introduction p {
     opacity: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Papyrus', Georgia, 'Times New Roman', Times, serif;
     margin: 3vh 3vw;
-    line-height: 1.8rem;
-    font-weight: normal;
-    font-size: 1.1rem;
+    line-height: 1.9rem;
+    font-size: 1.2rem;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
     padding: 20px 5vw;
     animation: introductionTextAppear 1s ease-in-out forwards;
     animation-delay: 5s;
-    font-style: italic;
+    font-style: normal;
     z-index: 400;
 }
 

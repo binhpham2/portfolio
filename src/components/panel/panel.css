@@ -40,8 +40,9 @@
 
 .Panel > div > button > p {
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Segoe Script', 'Papyrus', Georgia, 'Times New Roman', Times, serif;
     font-size: 1rem;
+    font-weight: bold;
     letter-spacing: 0.1rem;
     width: 100%;
     height: 100%;
